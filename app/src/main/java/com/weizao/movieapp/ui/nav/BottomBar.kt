@@ -40,7 +40,8 @@ fun BottomBar(current: Tab, onChange: (Tab) -> Unit) {
             .background(C.Card),
         verticalAlignment = Alignment.CenterVertically
     ) {
-        Tab.entries.forEach { t ->
+        // 底部只保留「首页 / 榜单 / 直播 / 我的」，搜索入口从底部去掉
+        Tab.entries.filter { it != Tab.Search }.forEach { t ->
             val on = t == current
             val scale by animateFloatAsState(if (on) 1.05f else 1f, label = "s")
             Column(

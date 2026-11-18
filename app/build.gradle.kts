@@ -13,8 +13,8 @@ android {
         applicationId = "com.weizao.movieapp"
         minSdk = 29
         targetSdk = 34
-        versionCode = 50
-        versionName = "1.7.5"
+        versionCode = 51
+        versionName = "1.7.6"
     }
     buildTypes {
         release {
